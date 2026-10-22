@@ -1,42 +1,26 @@
-# ==========================================
-# 1. Thư mục Build Output của Keil MDK
-# ==========================================
+# Bỏ qua thư mục build ở bất kỳ cấp thư mục con nào
 **/Objects/
 **/Listings/
 
-# ==========================================
-# 2. File Artifacts & File nạp sinh ra khi Build
-# ==========================================
-*.o
-*.obj
-*.d
-*.crf
-*.lst
-*.map
-*.axf
-*.hex
-*.bin
-*.elf
-*.srec
+# Bỏ qua các file rác biên dịch của Keil C
+*/*.axf
+*/*.bin
+*/*.hex
+*/*.htm
+*/*.lnp
+*/*.sct
+*/*.map
+*/*.d
+*/*.crf
+*/*.o
+*/*.dep
+*/*.build_log.htm
 
-# ==========================================
-# 3. File rác, cache, backup, session của uVision
-# ==========================================
-*.bak
-*.dep
-*.build_log.htm
-*.htm
-*.uvgui.*
-*.uvguix.*
-*.saved_uv4
-*.uvopt
-
-# File lưu trạng thái cửa sổ, breakpoint cá nhân (tránh conflict git)
-*.uvoptx
-
-# ==========================================
-# 4. File rác từ hệ điều hành
-# ==========================================
-.DS_Store
-Thumbs.db
-desktop.ini
+# Bỏ qua file cấu hình giao diện người dùng cá nhân của Keil C (chỉ giữ lại .uvprojx)
+*/*.uvopt
+*/*.uvoptx
+*/*.uvgui.*
+*/*.uvguix.*
+*/*.bak
+*/*.orig
+*/*.~*
